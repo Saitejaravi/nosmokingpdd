@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mindful daily reflection"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/mindful_reflection_image"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Question 1: Mood Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q1. What’s your mood today?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_sad_face"
+                android:contentDescription="Sad"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_neutral_face"
+                android:contentDescription="Neutral"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp"
+                android:layout_marginStart="16dp"/>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_happy_face"
+                android:contentDescription="Happy"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackground"
+                android:padding="8dp"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+        <!-- Question 2: Craving Scale -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q2. On a scale of 1-10, how strong is your craving today?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <!-- Craving Scale Buttons -->
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="5"
+                android:rowCount="2"
+                android:padding="8dp">
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="1"/>
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="2"/>
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="3"/>
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="4"/>
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="5"/>
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="6"/>
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="7"/>
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="8"/>
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="9"/>
+
+                <Button
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:minWidth="48dp"
+                    android:minHeight="48dp"
+                    android:text="10"/>
+            </GridLayout>
+        </LinearLayout>
+
+        <!-- Question 3: Smoke-Free Day -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q3. Have you added another smoke-free day?"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnYes"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="Yes"
+                android:backgroundTint="@color/light_gray"/>
+
+            <Button
+                android:id="@+id/btnNo"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:text="No"
+                android:layout_marginStart="20dp"
+                android:backgroundTint="@color/red"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

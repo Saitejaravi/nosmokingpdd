@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".DoctorProfileActivity">
+
+    <!-- 🔙 Back Button -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_back"
+        android:contentDescription="Back"
+        android:padding="8dp"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 📜 Menu Button -->
+    <ImageView
+        android:id="@+id/menuButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_menu"
+        android:contentDescription="Menu Button"
+        android:padding="8dp"
+        android:layout_margin="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- 🩺 Doctor Image -->
+    <ImageView
+        android:id="@+id/doctorImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_doctor"
+        android:scaleType="centerCrop"
+        android:contentDescription="Doctor Profile Image"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 📄 Profile Details Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/doctorImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <!-- 🔹 Profile Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doctor Profile"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/red"
+                android:layout_marginBottom="16dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorAccent"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- 🏥 Doctor Details -->
+            <TextView android:id="@+id/doctorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👨‍⚕️ Name: Dr. John Doe"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView android:id="@+id/doctorAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📅 Age: 40"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView android:id="@+id/doctorGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚤ Gender: Male"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView android:id="@+id/doctorPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📞 Phone: +1234567890"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView android:id="@+id/doctorEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📧 Email: doctor@example.com"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- 🔽 Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:menu="@menu/bottom_nav_menu"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

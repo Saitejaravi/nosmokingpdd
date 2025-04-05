@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Back Button -->
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/backButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_back"
+                    android:contentDescription="Back"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_gravity="center"/>
+            </FrameLayout>
+
+            <!-- Header Image -->
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/notobacco_image"
+                android:contentDescription="No Tobacco Image"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NOTABACCO DAY"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STOP SMOKING"
+                android:textSize="16sp"
+                android:textColor="@android:color/darker_gray"/>
+
+            <!-- Question: Reason for Craving -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reason for your craving?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="24dp"/>
+
+            <!-- Craving Buttons -->
+            <Button
+                android:id="@+id/btnFrustration"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Frustration"
+                android:background="@drawable/btn_rounded"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/btnStress"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Stress"
+                android:background="@drawable/btn_rounded"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/btnDepression"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Depression"
+                android:background="@drawable/btn_rounded"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/btnAnxiety"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Anxiety"
+                android:background="@drawable/btn_rounded"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Question: Craving Scale (1-5) -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="On a scale of 1-5 your craving?"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="24dp"/>
+
+            <!-- Craving Scale (1-5) -->
+            <RadioGroup
+                android:id="@+id/radioGroupCravingScale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioOne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"/>
+
+                <RadioButton
+                    android:id="@+id/radioTwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2"/>
+
+                <RadioButton
+                    android:id="@+id/radioThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3"/>
+
+                <RadioButton
+                    android:id="@+id/radioFour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"/>
+
+                <RadioButton
+                    android:id="@+id/radioFive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5"/>
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar (Fixed at the Bottom) -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="@color/light_gray"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="30dp"
+        android:weightSum="4">
+
+        <ImageView
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            android:contentDescription="Home" />
+
+        <ImageView
+            android:id="@+id/navTasks"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_tasks"
+            android:contentDescription="Tasks" />
+
+        <ImageView
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Profile" />
+
+        <ImageView
+            android:id="@+id/navMore"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more"
+            android:contentDescription="More" />
+    </LinearLayout>
+
+</LinearLayout>
